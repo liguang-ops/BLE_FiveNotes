@@ -1,7 +1,7 @@
 
 // pages/charts/statistics_results/index.js
 import F2 from '../../../f2-canvas/lib/f2';
-
+const app = getApp()
 let chart = null;
 
 function initChart(canvas, width, height,data) {
@@ -55,7 +55,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://192.168.123.189:5000/countResultAll',
+          url: app.globalData.globalUrlIp +'/countResultAll',
           data: {
             device_mac: that.data.device_mac
           },

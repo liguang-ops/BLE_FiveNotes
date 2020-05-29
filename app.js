@@ -45,6 +45,7 @@ App({
   },
 
   globalData: {
+    globalUrlIp:"192.168.123.189:5000",
     userInfo: null,
     tabbar: {
       color: "#707070",

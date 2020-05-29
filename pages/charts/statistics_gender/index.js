@@ -1,6 +1,8 @@
 // pages/charts/statistics_results_per/index.js
 import F2 from '../../../f2-canvas/lib/f2';
 let chart = null;
+const app = getApp()
+
 function initChart(canvas, width, height,data,that) {
 
   var chart = new F2.Chart({
@@ -80,7 +82,7 @@ Page({
           device_mac: res.data
         })
         wx.request({
-          url: 'http://192.168.123.189:5000/countGendersProportion',
+          url: app.globalData.globalUrlIp +'/countGendersProportion',
           data: {
             device_mac: that.data.device_mac
           },

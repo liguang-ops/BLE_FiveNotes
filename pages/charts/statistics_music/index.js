@@ -1,7 +1,7 @@
 // pages/charts/statistics_music/index.js
 
 import F2 from '../../../f2-canvas/lib/f2';
-
+const app = getApp()
 let chart = null;
 
 function initChart(canvas, width, height,data,that) {
@@ -81,7 +81,7 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: 'http://192.168.123.189:5000/countPerMusicNumber',
+      url: app.globalData.globalUrlIp +'/countPerMusicNumber',
       header: {//请求头
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
       },

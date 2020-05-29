@@ -55,7 +55,7 @@ Page({
         title: '正在发送邮件',
       })
       wx.request({
-        url: 'http://192.168.123.189:5000/sendMailSingle',
+        url: app.globalData.globalUrlIp +'/sendMailSingle',
         data: {
           patient_id: that.data.patient_id,
           recipient_mail: that.data.recipient_mail
@@ -154,7 +154,7 @@ Page({
             })
 
             wx.request({
-              url: 'http://192.168.123.189:5000/querySearchConsultationList',
+              url: app.globalData.globalUrlIp +'/querySearchConsultationList',
               data: {
                 device_mac: that.data.device_mac,
                 search_name: that.data.search_name

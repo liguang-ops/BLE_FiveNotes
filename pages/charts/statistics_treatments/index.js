@@ -1,6 +1,7 @@
 // pages/charts/statistics_patient_numbers/index.js
 import F2 from '../../../f2-canvas/lib/f2';
 //import data from '../../../data/steps-pan.js'
+const app = getApp()
 let chart = null;
 
 function formatNumber(n) {
@@ -117,7 +118,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://192.168.123.189:5000/countTreatmentsPatientNumber',
+          url: app.globalData.globalUrlIp +'/countTreatmentsPatientNumber',
           data: {
             device_mac: that.data.device_mac
           },

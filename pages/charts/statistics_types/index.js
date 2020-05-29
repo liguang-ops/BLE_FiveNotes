@@ -2,6 +2,7 @@
 
 import F2 from '../../../f2-canvas/lib/f2';
 let chart=null
+const app = getApp()
 function initChart(canvas, width, height,data) {
   console.log('data input',data)
   const map = {
@@ -86,7 +87,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://192.168.123.189:5000/countTypesProportion',
+          url: app.globalData.globalUrlIp +'/countTypesProportion',
           data: {
             device_mac: that.data.device_mac
           },

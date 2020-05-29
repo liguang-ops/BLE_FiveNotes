@@ -1,7 +1,9 @@
 // pages/charts/statistics_age/index.js
 
 import F2 from '../../../f2-canvas/lib/f2';
+const app = getApp()
 
+console.log(app.globalData.globalUrlIp)
 let chart = null;
 
 function initChart(canvas, width, height, data) {
@@ -85,7 +87,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://192.168.123.189:5000/countAgesProportion',
+          url: app.globalData.globalUrlIp +'/countAgesProportion',
           data: {
             device_mac: that.data.device_mac
           },

@@ -1,6 +1,5 @@
 // pages/charts/statistics_results_music/index.js
 import F2 from '../../../f2-canvas/lib/f2';
-
 let chart = null;
 
 function initChart(canvas, width, height) {

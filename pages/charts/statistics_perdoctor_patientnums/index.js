@@ -1,6 +1,6 @@
 // pages/charts/statistics_perdoctor_patientnums/index.js
 import F2 from '../../../f2-canvas/lib/f2';
-
+const app = getApp()
 function initChart(canvas, width, height,data) {
   const chart = new F2.Chart({
     el: canvas,
@@ -68,7 +68,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://192.168.123.189:5000/countPerDoctorPatientNumber',
+          url: app.globalData.globalUrlIp +'/countPerDoctorPatientNumber',
           data: {
             device_mac: that.data.device_mac
           },

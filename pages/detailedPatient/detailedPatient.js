@@ -137,7 +137,7 @@ Page({
   upload:function(){
     var that =this
     wx.request({
-      url: 'http://192.168.123.189:5000/updatePatientInfo',
+      url: app.globalData.globalUrlIp +'/updatePatientInfo',
       data: {
         patient_name: that.data.patient_name,
         patient_age: that.data.patient_age,

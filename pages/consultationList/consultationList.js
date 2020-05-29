@@ -53,7 +53,7 @@ Page({
         title: '正在发送邮件',
       })
       wx.request({
-        url: 'http://192.168.123.189:5000/sendMailSingle',
+        url: app.globalData.globalUrlIp +'/sendMailSingle',
         data: {
           patient_id: that.data.patient_id,
           recipient_mail: that.data.recipient_mail
@@ -90,7 +90,7 @@ Page({
       })
       console.log('mail',that.data.device_mac)
       wx.request({
-        url: 'http://192.168.123.189:5000/sendMailAll',
+        url: app.globalData.globalUrlIp +'/sendMailAll',
         data: {
           device_mac: that.data.device_mac,
           recipient_mail: that.data.recipient_mail
@@ -309,7 +309,7 @@ Page({
         console.log('all data', that.data.patients)
 
         wx.request({
-          url: 'http://192.168.123.189:5000/syncAllPatientsInfo',
+          url: app.globalData.globalUrlIp +'/syncAllPatientsInfo',
           header: {//请求头
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
           },
@@ -363,7 +363,7 @@ Page({
     //that.Receive();
     //向服务器获取所有病人信息
     wx.request({
-      url: 'http://192.168.123.189:5000/queryConsultationListWeixin',
+      url: app.globalData.globalUrlIp +'/queryConsultationListWeixin',
       data: {
         device_mac: that.data.device_mac
       },
