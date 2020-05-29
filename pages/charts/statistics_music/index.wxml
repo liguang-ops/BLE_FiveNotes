@@ -1,0 +1,6 @@
+<!--pages/charts/statistics_music/index.wxml-->
+<view class="container">
+  <text>{{ message }}</text>  
+  <ff-canvas id="roseMusic" canvas-id="rose" opts="{{ opts }}"></ff-canvas>
+</view>
+

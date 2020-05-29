@@ -1,0 +1,9 @@
+<!--pages/statistics/statistics.wxml-->
+<import src="../tabbar/tabbar.wxml"/>  
+<template is="tabbar" data="{{tabbar}}"/>  
+<view class='page'>
+  <view  wx:for="{{charts}}" wx:for-item="chart" wx:key="{{chart.name}}"  class="list-item">
+    <image src="../../images/{{chart.name}}.png" data-page="{{chart.name}}" mode="aspectFit" bindtap="gotoPage" ></image> 
+    {{chart.value}}
+  </view>
+</view>

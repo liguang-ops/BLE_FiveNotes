@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ff-canvas": "../../../f2-canvas/f2-canvas"
+  },
+  "navigationBarTitleText": "每日治疗人数统计"
+}

@@ -1,0 +1,5 @@
+<!--pages/charts/statistics_types/index.wxml-->
+<view class="container">
+  <ff-canvas id="myTypesPie" canvas-id="myTypesPie" opts="{{ opts }}"></ff-canvas>
+</view>
+

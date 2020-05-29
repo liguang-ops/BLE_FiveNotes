@@ -1,0 +1,5 @@
+<view class="container">
+<text>{{ message }}</text>  
+  <ff-canvas id="myGendersPie" canvas-id="myGendersPie" opts="{{ opts }}"></ff-canvas>
+</view>
+

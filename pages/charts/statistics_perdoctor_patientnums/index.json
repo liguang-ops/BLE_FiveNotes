@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ff-canvas": "../../../f2-canvas/f2-canvas"
+  },
+  "navigationBarTitleText": "医生接诊总人数统计"
+}

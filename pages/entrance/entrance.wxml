@@ -1,0 +1,24 @@
+<!--pages/entrance/entrance.wxml-->
+<view class='entrance'>
+  <image class='entranceImg' src='/images/entrance.gif'/>
+</view>
+
+<view>
+  <!-- <button class='bleBtn' bindtap='Search'>蓝牙连接</button> -->
+  <button class='bleBtn' bindtap='showDialogBtn'>连接</button>
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">设备编号</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" maxlength="17" bindinput="inputMessage" class="input" placeholder="请输入设备编号"></input>
+      </view>
+      <view class='tip' hidden='{{hidden}}'>设备编号不能为空</view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>
+</view>

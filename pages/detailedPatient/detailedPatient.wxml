@@ -1,0 +1,74 @@
+  <!--pages/detailedPatient/detailedPatient.wxml-->
+<view class='container'>
+  <image style="width:130px;height:130px" src='/images/portrait.png'></image>
+  <view style="width:60%;" class='character'>
+  <view style="display:flex;flex-direction:row;width:100%">
+    <text style="font-size:16;word-break:break-all" decode="{{true}}">{{patient_name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text style="font-size:medium;color:gray;word-break:break-all" decode="{{true}}">{{patient_age}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text style="font-size:medium;color:gray;word-break:break-all" decode="{{true}}">{{patient_gender}}&nbsp;&nbsp;</text>
+  </view>
+  <view style="display:flex;flex-direction:column;width:100%;margin-top:10px">
+    <text style="font-size:medium;color:gray;word-break:break-all" decode="{{true}}">治疗进度:&nbsp;&nbsp;&nbsp;{{treatment_count}}/4</text>
+    <text style="font-size:medium;color:gray;word-break:break-all" decode="{{true}}">分级:&nbsp;&nbsp;{{grade_level}}</text>
+    <text style="font-size:medium;color:gray;word-break:break-all" decode="{{true}}">评分:&nbsp;&nbsp;&nbsp;{{grade_score}}</text>
+    <view class='list-msg'>
+      <text style="font-size:medium;color:gray;">分型1:</text>
+      <!--下拉框  -->
+      <view class='list-msg2' bindtap='bindShowMsg1'>
+        <text style="font-size:medium">{{patient_doctor_category1}}</text>
+      </view>
+      <!-- 下拉需要显示的列表 -->
+      <view class="select_box" wx:if="{{select1}}">
+        <view class="select_one" bindtap="mySelect1" data-name="风热侵袭" style="font-size:medium">风热侵袭</view>
+        <view class="select_one" bindtap="mySelect1" data-name="肝火上扰" style="font-size:medium">肝火上扰</view>
+        <view class="select_one" bindtap="mySelect1" data-name="痰火郁结" style="font-size:medium">痰火郁结</view>
+        <view class="select_one" bindtap="mySelect1" data-name="肾精亏损" style="font-size:medium">肾精亏损</view>
+        <view class="select_one" bindtap="mySelect1" data-name="脾胃虚弱" style="font-size:medium">脾胃虚弱</view>
+      </view>
+    </view>
+    <view class='list-msg'>
+      <text style="font-size:medium;color:gray;">分型2:</text>
+      <!--下拉框  -->
+      <view class='list-msg2' bindtap='bindShowMsg2'>
+        <text style="font-size:medium">{{patient_doctor_category2}}</text>
+      </view>
+      <!-- 下拉需要显示的列表 -->
+      <view class="select_box" wx:if="{{select2}}">
+        <view class="select_one" bindtap="mySelect2" data-name="风热侵袭" style="font-size:medium">风热侵袭</view>
+        <view class="select_one" bindtap="mySelect2" data-name="肝火上扰" style="font-size:medium">肝火上扰</view>
+        <view class="select_one" bindtap="mySelect2" data-name="痰火郁结" style="font-size:medium">痰火郁结</view>
+        <view class="select_one" bindtap="mySelect2" data-name="肾精亏损" style="font-size:medium">肾精亏损</view>
+        <view class="select_one" bindtap="mySelect2" data-name="脾胃虚弱" style="font-size:medium">脾胃虚弱</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+    
+</view>
+<view class='record'>
+  <view >
+    <view class='subrecord'>
+      <text class='record-label'>主诉</text>
+      <textarea class='record-text'  value="{{patient_self_reported}}" bindblur='reportBlur' disabled='true'/>
+    </view>
+    <view class='subrecord'>
+      <text class='record-label'>现病史</text>
+      <textarea class='record-text' value='{{patient_medical_history}}' bindblur='historyBlur' disabled='true'/>
+    </view>
+    <view class='subrecord'>
+      <text class='record-label'>检查</text>
+      <textarea class='record-text' value='{{patient_examination}}' bindblur='examinationBlur' disabled='true'/>
+    </view>
+    
+  </view>
+  <button class='btnConfirm' bindtap='btnConfirm'>确定</button>
+</view>
+
+
+
+
+
+
+
+

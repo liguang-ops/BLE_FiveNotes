@@ -1,0 +1,5 @@
+<!--pages/charts/statistics_results/index.wxml-->
+<view class="container">
+  <ff-canvas id="columnResultAll" canvas-id="columnResultAll" opts="{{ opts }}"></ff-canvas>
+</view>
+

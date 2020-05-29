@@ -1,0 +1,31 @@
+<!--pages/logo/logo.wxml-->
+<view>
+  <view  class='logo'>
+    <image class='img' src="{{imgFilepath}}" mode='scaleToFill' bindtap='changeImg'></image>
+    <text class='nameText' bindtap='changeName'>{{showName}}</text>
+  </view>
+
+  <view class='toast-box' hidden="{{isHidden}}">
+    <view class='toastbg'></view>
+    <view class='showToast'>
+        <view class='toast-title'>
+            <text>修改设备名称</text>
+        </view>
+        <view class='toast-main'>
+          <view class='toast-input'>
+            <input placeholder='请输入设备名称' bindinput='setValue'></input>
+          </view>
+        </view>
+        <view class='toast-button'>
+          <view class='button1'>
+            <button catchtap='cancel'>取消</button>
+          </view>
+          <view class='button2'>
+            <button catchtap='confirm'>确定</button>
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <button class='btnConfirm' bindtap='btnConfirm'>确定</button>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/mydevice/mydevice.wxml-->
+<import src="../tabbar/tabbar.wxml"/>  
+<template is="tabbar" data="{{tabbar}}"/>  
+
+<view>
+  <view class="device">
+    <text class="deviceTextStyle">设备编号</text>
+    <text class="deviceno">{{device_mac}}</text>
+  </view>
+  <view catchtap="changeLogo"   class="device">
+    <text class="deviceTextStyle">logo和名称</text>
+    <text class="righthead"></text>
+  </view>
+  <view catchtap="firmwareUpdate"   class="device">
+    <text class="deviceTextStyle">固件检查更新</text>
+    <text class="righthead"></text>
+  </view>
+  <view catchtap="musicUpdate"   class="device">
+    <text class="deviceTextStyle">曲库检查更新</text>
+    <text class="righthead"></text>
+  </view>
+</view>
+
+
+
+
+
+
+

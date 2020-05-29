@@ -1,0 +1,4 @@
+<!--pages/charts/statistics_age/index.wxml-->
+<view class="container">
+  <ff-canvas id="myAgesPie" canvas-id="myAgesPie" opts="{{ opts }}"></ff-canvas>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/consultationList/consultationList.wxml-->
+<import src="../tabbar/tabbar.wxml"/>  
+<template is="tabbar" data="{{tabbar}}"/>  
+
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="请输入查询姓名" bindtap="wxSearchTab"/>
+    </view>
+  </view>
+</view>
+
+<view class="container">
+  <scroll-view scroll-y style="width:690rpx;height:{{list_height}}rpx">
+    <block wx:for="{{consultationList}}" wx:key="patient_id" >
+      <view class="list-item" id="{{item.patient_id}}">
+        <view style="display:flex;flex-direction:column;width:80%" data-index="{{index}}" bindtap="goDetail">
+          <text style="font-size:medium;word-break:break-all">{{item.patient_name}}</text>
+          <text style="font-size:small;color:red;word-break:break-all" decode="{{true}}">{{item.patient_doctor_category1}}</text>
+          <view>
+            <text style="font-size:small;color:gray;word-break:break-all" decode="{{true}}">{{item.patient_gender}}&nbsp;&nbsp;&nbsp;</text>
+            <text style="font-size:small;color:gray;word-break:break-all" decode="{{true}}">{{item.patient_age}}&nbsp;&nbsp;&nbsp;</text>
+            <text style="font-size:small;color:gray;word-break:break-all" decode="{{true}}">治疗进度: &nbsp;{{item.treatment_count}}/4&nbsp;&nbsp;&nbsp;</text>
+            <text style="font-size:small;color:gray;word-break:break-all" decode="{{true}}">分级：{{item.grade_level}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text style="font-size:small;color:gray;word-break:break-all" decode="{{true}}">评分：{{item.grade_score}}</text>
+          </view>
+        </view>
+        <image style="width:36px;height:36px" mode="aspectFit" src="/images/download.png" bindtap='download' id="{{item.patient_id}}"></image>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class='toast-box' hidden="{{isHidden}}">
+    <view class='toastbg'></view>
+    <view class='showToast'>
+        <view class='toast-title'>
+            <text>邮箱请求</text>
+        </view>
+        <view class='toast-main'>
+          <view class='toast-input'>
+            <input placeholder='请输入邮箱' bindinput='setValue'></input>
+          </view>
+        </view>
+        <view class='toast-button'>
+          <view class='button1'>
+            <button catchtap='cancel'>取消</button>
+          </view>
+          <view class='button2'>
+            <button catchtap='confirm'>确定</button>
+          </view>
+        </view>
+    </view>
+  </view>

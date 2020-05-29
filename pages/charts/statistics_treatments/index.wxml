@@ -1,0 +1,4 @@
+<!--pages/charts/statistics_patient_numbers/index.wxml-->
+<view class="container">
+  <ff-canvas id="myColumnChart" canvas-id="myColumnChart" opts="{{ opts }}"></ff-canvas>
+</view>

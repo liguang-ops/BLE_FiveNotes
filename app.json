@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/entrance/entrance",
+    "pages/ble/ble",
+    "pages/mydevice/mydevice",
+    "pages/search/search",
+    "pages/detailedPatient/detailedPatient",
+    "pages/consultationList/consultationList",
+    "pages/logo/logo",
+    "pages/statistics/statistics",
+    "pages/charts/statistics_treatments/index",
+    "pages/charts/statistics_music/index",
+    "pages/charts/statistics_results_all/index",
+    "pages/charts/statistics_types/index",
+    "pages/charts/statistics_age/index",
+    "pages/charts/statistics_gender/index",
+    "pages/charts/statistics_perdoctor_patientnums/index",
+    "pages/charts/statistics_results_music/index",
+    "pages/searchConsultationList/searchConsultationList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#66CCFF",
+    "navigationBarTitleText": "五音诊疗医生端",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap96.json"
+}
