@@ -82,7 +82,7 @@ Page({
           device_mac: res.data
         })
         wx.request({
-          url: app.globalData.globalUrlIp +'/countGendersProportion',
+          url: app.globalData.globalUrlIp + '/countGendersProportion',   //统计性别人数占比
           data: {
             device_mac: that.data.device_mac
           },

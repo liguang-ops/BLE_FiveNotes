@@ -55,7 +55,7 @@ Page({
         })
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/countResultAll',
+          url: app.globalData.globalUrlIp + '/countResultAll',    //统计整体疗效 
           data: {
             device_mac: that.data.device_mac
           },

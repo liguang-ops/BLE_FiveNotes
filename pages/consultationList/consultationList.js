@@ -53,7 +53,7 @@ Page({
         title: '正在发送邮件',
       })
       wx.request({
-        url: app.globalData.globalUrlIp +'/sendMailSingle',
+        url: app.globalData.globalUrlIp + '/sendMailSingle',    //发送单条信息邮件
         data: {
           patient_id: that.data.patient_id,
           recipient_mail: that.data.recipient_mail
@@ -90,7 +90,7 @@ Page({
       })
       console.log('mail',that.data.device_mac)
       wx.request({
-        url: app.globalData.globalUrlIp +'/sendMailAll',
+        url: app.globalData.globalUrlIp + '/sendMailAll',   //发送所有信息邮件
         data: {
           device_mac: that.data.device_mac,
           recipient_mail: that.data.recipient_mail
@@ -309,7 +309,7 @@ Page({
         console.log('all data', that.data.patients)
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/syncAllPatientsInfo',
+          url: app.globalData.globalUrlIp + '/syncAllPatientsInfo',   //同步设备端所有病人信息至云端
           header: {//请求头
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
           },
@@ -363,7 +363,7 @@ Page({
     //that.Receive();
     //向服务器获取所有病人信息
     wx.request({
-      url: app.globalData.globalUrlIp +'/queryConsultationListWeixin',
+      url: app.globalData.globalUrlIp + '/queryConsultationListWeixin',   //小程序获取所有患者信息 
       data: {
         device_mac: that.data.device_mac
       },

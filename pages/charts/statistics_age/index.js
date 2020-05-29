@@ -87,7 +87,7 @@ Page({
         })
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/countAgesProportion',
+          url: app.globalData.globalUrlIp +'/countAgesProportion',   //统计年龄占比
           data: {
             device_mac: that.data.device_mac
           },

@@ -68,7 +68,7 @@ Page({
         })
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/countPerDoctorPatientNumber',
+          url: app.globalData.globalUrlIp + '/countPerDoctorPatientNumber',   //统计每位医生的患者数
           data: {
             device_mac: that.data.device_mac
           },

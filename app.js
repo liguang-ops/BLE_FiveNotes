@@ -45,7 +45,7 @@ App({
   },
 
   globalData: {
-    globalUrlIp:"192.168.123.189:5000",
+    globalUrlIp:"192.168.123.189:5000",   //本地测试ip，后期需要改为正式服务器域名
     userInfo: null,
     tabbar: {
       color: "#707070",

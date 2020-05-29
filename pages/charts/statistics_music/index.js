@@ -81,7 +81,7 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: app.globalData.globalUrlIp +'/countPerMusicNumber',
+      url: app.globalData.globalUrlIp + '/countPerMusicNumber',   //统计每种类型音乐数
       header: {//请求头
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
       },

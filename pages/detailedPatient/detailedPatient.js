@@ -137,7 +137,7 @@ Page({
   upload:function(){
     var that =this
     wx.request({
-      url: app.globalData.globalUrlIp +'/updatePatientInfo',
+      url: app.globalData.globalUrlIp + '/updatePatientInfo',   //更新单条病人信息
       data: {
         patient_name: that.data.patient_name,
         patient_age: that.data.patient_age,

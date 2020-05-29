@@ -118,7 +118,7 @@ Page({
         })
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/countTreatmentsPatientNumber',
+          url: app.globalData.globalUrlIp +'/countTreatmentsPatientNumber',    //统计每天治疗人数
           data: {
             device_mac: that.data.device_mac
           },

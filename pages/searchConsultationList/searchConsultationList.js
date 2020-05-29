@@ -1,4 +1,5 @@
 // pages/searchConsultationList/searchConsultationList.js
+const app = getApp()
 Page({
 
   /**
@@ -9,8 +10,6 @@ Page({
     device_mac:'B0:E2:35:96:60:55',
     isHidden:true
   },
-
-
   /**
    * 转到个人详细页
    */
@@ -154,7 +153,7 @@ Page({
             })
 
             wx.request({
-              url: app.globalData.globalUrlIp +'/querySearchConsultationList',
+              url: app.globalData.globalUrlIp + '/querySearchConsultationList',  //获取指定姓名的患者信息
               data: {
                 device_mac: that.data.device_mac,
                 search_name: that.data.search_name

@@ -87,7 +87,7 @@ Page({
         })
 
         wx.request({
-          url: app.globalData.globalUrlIp +'/countTypesProportion',
+          url: app.globalData.globalUrlIp + '/countTypesProportion',   //统计第一分型人数占比
           data: {
             device_mac: that.data.device_mac
           },
