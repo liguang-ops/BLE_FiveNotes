@@ -45,7 +45,7 @@ App({
   },
 
   globalData: {
-    globalUrlIp:"192.168.123.189:5000",   //本地测试ip，后期需要改为正式服务器域名
+    globalUrlIp:"http://backtest-1056345-1257887823.ap-shanghai.run.tcloudbase.com",   //本地测试ip，后期需要改为正式服务器域名
     userInfo: null,
     tabbar: {
       color: "#707070",

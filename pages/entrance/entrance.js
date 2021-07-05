@@ -70,7 +70,7 @@ Page({
         data: that.data.device_id,
       })
       wx.redirectTo({
-        url: '/pages/ble/ble',
+        url: '/pages/consultationList/consultationList',
       })
     }
 
@@ -83,7 +83,7 @@ Page({
 
   Search:function(){
     wx.redirectTo({
-      url: '/pages/ble/ble',
+      url: '/pages/consultationList/consultationList',
     })
   },
 

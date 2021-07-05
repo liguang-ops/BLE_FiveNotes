@@ -116,7 +116,7 @@ Page({
         that.setData({
           device_mac: res.data
         })
-
+        console.log(app.globalData.globalUrlIp);
         wx.request({
           url: app.globalData.globalUrlIp +'/countTreatmentsPatientNumber',    //统计每天治疗人数
           data: {
@@ -127,6 +127,7 @@ Page({
           },
           method: "POST",
           success: function (res) {
+            console.log(app.globalData.globalUrlIp);
             let data = res.data
             console.log('data', data)
             that.chartComponent = that.selectComponent('#myColumnChart');
